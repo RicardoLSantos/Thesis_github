@@ -1,0 +1,20 @@
+# LaTeX files
+*.aux
+*.log
+*.bbl
+*.blg
+*.toc
+*.out
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+
+# OS files
+.DS_Store
+.Thumbs.db
+
+# Editor files
+*.swp
+*~
