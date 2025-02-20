@@ -11,6 +11,8 @@
 Ricardo L. Santos: [0000-0001-6017-8255](https://orcid.org/0000-0001-6017-8255)  
 Ricardo Cruz-Correia: [0000-0002-3764-5158](https://orcid.org/0000-0002-3764-5158)
 
+**Project funded by FCT DOI:** [10.54499/UI/BD/151502/2021]
+
 ## Abstract
 
 One approach to enriching the Learning Health System (LHS) is leveraging vital signs and data from wearable technologies. Blood oxygen, heart rate, respiration rates, and other data collected by wearables (like sleep and exercise patterns) can be used to monitor and predict health conditions. This data is already being collected and could be used to improve healthcare in several ways. Our approach will be health data interoperability with HL7 FHIR (for data exchange between different systems), openEHR (to store researchable data separated from software but connected to ontologies, external terminologies and code sets) and maintain the semantics of data. OpenEHR is a standard that has an important role in modelling processes and clinical decisions. The six pillars of Lifestyle Medicine can be a first attempt to change how patients see their daily decisions, affecting the mid to long-term evolution of their health. Our objective is to develop the first stage of the LHS based on a co-produced personal health recording (CoPHR) built on top of a local LLM that interoperates health data through HL7 FHIR, openEHR, OHDSI and terminologies that can ingest external evidence and produces clinical and personal decision support and, when combined with many other patients, can produce or confirm evidence.

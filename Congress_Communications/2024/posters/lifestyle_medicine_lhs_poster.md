@@ -7,7 +7,9 @@
 
 **Event:** 2º Congresso Português de Medicina do Estilo de Vida  
 **Date:** 27-29 May 2024  
-**Project funded by FCT DOI:** [10.54499/UI/BD/151502/2021](https://doi.org/10.54499/UI/BD/151502/2021)
+
+**Project funded by FCT DOI:** [10.54499/UI/BD/151502/2021]
+(https://doi.org/10.54499/UI/BD/151502/2021)
 
 ## Authors
 * Ricardo Lourenço Dos Santos¹

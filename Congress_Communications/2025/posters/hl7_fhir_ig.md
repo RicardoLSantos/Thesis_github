@@ -11,6 +11,8 @@
 Ricardo L. Santos: [0000-0001-6017-8255](https://orcid.org/0000-0001-6017-8255)  
 Ricardo Cruz-Correia: [0000-0002-3764-5158](https://orcid.org/0000-0002-3764-5158)
 
+**Project funded by FCT DOI:** [10.54499/UI/BD/151502/2021]
+
 ## Abstract
 This article describes the development of an Implementation Guide (IG) using HL7 FHIR® Shorthand (FSH) and SUSHI to enhance interoperability and data quality in a Learning Health System (LHS) focused on Lifestyle Medicine (LM) and based on Patient-Generated Health Data (PGHD). The IG standardizes data from wearables and health applications across nine key health domains: vital signs, physical activity, sleep, mindfulness, body measurements, nutrition, environmental factors, reproductive health, and social interactions.
 
