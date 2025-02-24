@@ -1,0 +1,26 @@
+\section{Introduction}
+
+The integration of Patient-Generated Health Data (PGHD) into clinical practice represents a significant opportunity for healthcare quality improvement, particularly in the management of lifestyle-related conditions \cite{santos2023improving}. While theoretical frameworks provide valuable guidance for developing Learning Health Systems (LHS) that incorporate PGHD, there is a critical need for practical implementations that demonstrate the feasibility and value of such approaches \cite{santos2024improving}.
+
+This paper presents a proof of concept implementation of a co-produced Personal Health Record (coPHR) system designed to integrate PGHD into clinical practice, with a specific focus on vital signs monitoring and lifestyle medicine applications \cite{santos2024healthcare}. The implementation demonstrates how semantic interoperability standards such as HL7 FHIR and openEHR can be applied to create systems that support the seamless exchange of health data between patients and healthcare providers \cite{frade2021openehr}.
+
+The coPHR concept represents a collaborative approach to health data management, emphasizing shared responsibility between patients and healthcare providers \cite{apperta2018blueprint}. Unlike traditional patient portals or personal health records, a coPHR provides patients with control over their health data while facilitating safe and secure data sharing with healthcare providers. This approach aligns with the growing recognition of patient engagement as a critical factor in healthcare quality and outcomes \cite{vaidyam2022enabling}.
+
+Our implementation addresses several key technical challenges in PGHD integration:
+
+\begin{enumerate}
+    \item Data collection from diverse sources, including wearable devices (smartwatches, fitness trackers) and smartphones
+    \item Data standardization and mapping to established clinical terminology systems
+    \item Extraction, transformation, and loading (ETL) processes for heterogeneous health data
+    \item Local processing of health data using Large Language Models (LLMs) to preserve privacy \cite{miao2024chain}
+    \item User interface design that supports both patient self-management and clinical decision-making
+    \item Security and privacy protection in accordance with regulatory requirements \cite{sousa2018openehr}
+\end{enumerate}
+
+The system architecture incorporates a modular design that separates data storage from application functionality, allowing for flexibility and extensibility. The core data repository is based on openEHR archetypes and templates, providing a standardized clinical information model \cite{silva2024openehr}. HL7 FHIR is used for external interfaces, enabling integration with a wide range of health information systems and consumer devices \cite{lichtner2023representation}.
+
+A distinctive feature of our implementation is the use of a local LLM for data processing and analysis. This approach allows for sophisticated natural language processing and data analytics while keeping sensitive health data within the patient's control, addressing important privacy concerns associated with cloud-based processing of health information \cite{balch2023machine}.
+
+The proof of concept implementation focuses initially on key vital signs including heart rate, oxygen saturation, physical activity, and sleep patterns. These parameters were selected based on their significance in lifestyle medicine interventions and the availability of consumer devices capable of measuring them with reasonable accuracy. The system incorporates validation mechanisms to assess data quality and reliability, ensuring that clinical decisions are based on trustworthy information \cite{beale2021decision}.
+
+This paper describes the system architecture, implementation details, and preliminary results of our coPHR proof of concept. We discuss the challenges encountered during implementation and the strategies employed to address them. Through this practical demonstration, we aim to contribute to the growing body of knowledge on effective approaches to PGHD integration in clinical practice and the development of patient-centered health information systems.
