@@ -1,21 +1,13 @@
-# Arquivos temporários R
+# Arquivos específicos do conversor DOCX para MD
 .Rhistory
 .RData
 .Rproj.user/
-
-# Arquivos de ambiente
 .Renviron
 .env
-
-# Diretórios de imagens (opcional, remova se quiser versionar as imagens)
 images/
 imagens/
-
-# Arquivos de exemplo
 *.docx
 *.md
-!README.md
-
-# Logs e outros arquivos temporários
+\!README.md
 *.log
 *.tmp
