@@ -1,20 +1,21 @@
-# LaTeX files
-*.aux
+# Arquivos temporários R
+.Rhistory
+.RData
+.Rproj.user/
+
+# Arquivos de ambiente
+.Renviron
+.env
+
+# Diretórios de imagens (opcional, remova se quiser versionar as imagens)
+images/
+imagens/
+
+# Arquivos de exemplo
+*.docx
+*.md
+!README.md
+
+# Logs e outros arquivos temporários
 *.log
-*.bbl
-*.blg
-*.toc
-*.out
-*.lof
-*.lot
-*.fls
-*.fdb_latexmk
-*.synctex.gz
-
-# OS files
-.DS_Store
-.Thumbs.db
-
-# Editor files
-*.swp
-*~
+*.tmp
