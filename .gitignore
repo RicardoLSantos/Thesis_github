@@ -7,13 +7,9 @@
 images/
 imagens/
 *.docx
-
 *.code-workspace
 \!README.md
 *.log
 *.tmp
-.DS_Store
-**/.DS_Store
-*.code-workspace
 .DS_Store
 **/.DS_Store
