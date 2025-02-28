@@ -1,0 +1,174 @@
+\chapter{Introduction} \label{chap:intro}
+
+Healthcare systems face growing challenges in terms of costs, quality, and access. The digitization of healthcare has created an unprecedented volume of data, but transforming this data into actionable knowledge remains a significant challenge. This project aims to build a framework, a proof of concept, and all necessary documentation for the development of a Learning Health System based on vital signs and the quality perceived by users in healthcare.
+
+\section{Context} \label{sec:context}
+
+The current scenario of healthcare systems is characterized by high and increasing costs, shortage of human resources, and growing pressure to improve the quality of services. As pointed out by Tainter \cite{Tainter1988}, societies tend to solve problems by increasing complexity, but eventually reach a point of diminishing returns.
+
+The author presents four fundamental principles to understand collapse:
+\begin{enumerate}
+\item Societies are problem-solving organizations
+\item Sociopolitical systems require energy to maintain themselves
+\item Increased complexity carries rising costs per capita
+\item Investment in complexity as a problem-solving strategy eventually reaches a point of diminishing returns
+\end{enumerate}
+
+This last point is perhaps the most important. The concept of "diminishing returns" means that as societies become more complex, they initially get good results from their investments in complexity (like bureaucracy, infrastructure, military). However, over time, these returns decrease while costs continue to increase.
+
+\begin{quote}
+``There is always a well-known solution to every human problem—neat, plausible, and wrong.'' \cite{Mencken1920}
+\end{quote}
+
+This observation by H. L. Mencken applies perfectly to healthcare systems, where simple solutions often ignore the inherent complexity and can lead to inadequate or harmful decisions, compromising the quality and effectiveness of proposed interventions.
+
+The 2019 Nobel Prize in Physiology or Medicine, awarded to William Kaelin, Jr., Sir Peter Ratcliffe, and Gregg Semenza \cite{Nobel_Prize}, highlighted the importance of \textbf{variations in oxygen supply} and their implications for gene expression, cellular metabolism, and physiological responses such as \textbf{heart rate} and ventilation. This work demonstrated how cellular hypoxia may be at the root of various pathologies, including cardiovascular diseases and cancer, through the Hypoxia-Inducible Factor (HIF-1$\alpha$) mechanism.
+
+If we try to simplify it, when there is low oxygen (also known as hypoxia), a process called hydroxylation cannot happen. As a result, the protein called VHL cannot detect another protein called HIF-1$\alpha$. Because of this, HIF-1$\alpha$ doesn't undergo a process which usually leads to its breakdown, and as a result, HIF-1$\alpha$ remains intact and starts to build up in the cell. This buildup allows HIF-1$\alpha$ to activate certain genes that are involved in responding to low oxygen levels, which is known as the hypoxia-induced gene expression program.
+
+Increased levels of HIF-1$\alpha$ can be found in many types of cancer, and it is also associated with cardiovascular diseases, like stroke, heart attack, and pulmonary hypertension. Thus, hypoxia at the cellular level can be at the root cause of many diseases. This assumption is supported by Louis Pasteur's demonstration in 1858 of the complex balance of oxygen use by cells to convert energy. Without oxygen (or outside the right range of oxygen), cells cannot convert energy efficiently, which might lead to cellular dysfunction. Damaged cells can lead to damaged tissue, damaged tissues can lead to damaged organs, and damaged organs can lead to local or even systemic disease.
+
+\section{Problem Statement and Objectives} \label{sec:goals}
+
+The central problem this project addresses is the gap between health data collection and its transformation into actionable knowledge that can improve care quality. Technological advances in wearables and smartphones allow for continuous vital sign collection, but these data are rarely integrated into health systems in a way that generates value.
+
+``You don't win with better algorithms or data. You win by framing problems in a way that makes it impossible to screw things up.'' \cite{Santiago2024}
+
+The main objective of this project is to develop an information system (as an early stage of a Learning Health System) that can:
+
+\begin{itemize}
+\item Detect early changes in vital signs, with an initial focus on hypoxia and heart rate
+\item Establish relationships between these changes and the pathophysiology of diseases
+\item Provide personalized feedback to patients about their data
+\item Suggest practical lifestyle modifications based on statistical analyses
+\item Facilitate interoperability of data between different health systems
+\end{itemize}
+
+This project does not aim to change how doctors work or how patients relate to their doctors, but rather to empower patients through evidence-based information and their own health data so they can make better decisions about their health and lifestyle. As articulated by patient advocate Dave deBronkart \cite{deBronkart2023}:
+
+\begin{quote}
+``Access to knowledge is changing patient power. For centuries, doctors operated without science. Then for a while only they had access to it. Today, patients no longer need to be in the dark.''
+\end{quote}
+
+We will focus on enabling patients through information based on evidence and based on the health data of each patient, patients with similar diseases, similar socio-economic conditions, and similar lifestyles, so they can make better decisions about their health and lifestyle.
+
+\section{Theoretical Foundations} \label{sec:theoretical}
+
+\subsection{Learning Health Systems}
+
+Learning Health Systems (LHS) represent a paradigm where data generated during care delivery are systematically collected, analyzed, and transformed into knowledge, which in turn is applied to improve health outcomes \cite{IOM2007}. Fundamental characteristics of an LHS include:
+
+\begin{itemize}
+\item Integration of data, scientific evidence, and patient experiences
+\item Continuous learning from data
+\item Evidence-based decision making
+\item Promotion of patient engagement
+\item Commitment to innovation
+\end{itemize}
+
+The purpose of our project is to build a framework and a proof of concept and all the necessary documentation for the development of a Learning Health System based on vital signs and the quality perceived by users in healthcare. We believe that observational scientific evidence (a well-structured and relevant research question is better than many double-blind, randomized studies based on biased or not based on real-world data research questions).
+
+\subsection{Health Data Interoperability}
+
+Semantic interoperability in health is fundamental to allow data to flow between different systems and be correctly interpreted. Standards such as openEHR and HL7 FHIR are essential for this project:
+
+\begin{itemize}
+\item openEHR: For structured storage of health data
+\item HL7 FHIR: For data exchange between systems
+\item SNOMED-CT: For standardized coding of data
+\item OMOP: For observational data analysis
+\item Smart on FHIR: For application integration
+\item CDA: For clinical document exchange
+\item CDS Hooks: For clinical decision support
+\item CQL: For clinical queries
+\end{itemize}
+
+As pointed out by Tomaz Gornik \cite{Gornik2021}: ``IT systems in use today were built for institutions, not patients...'' This project seeks to reverse this paradigm, putting patients at the center of data flow and decision making.
+
+\subsection{Lifestyle Medicine}
+
+Lifestyle Medicine emerges as a specialty focused on the prevention and treatment of chronic diseases through lifestyle modifications. Its six pillars include:
+
+\begin{itemize}
+\item Nutrition
+\item Physical activity
+\item Sleep
+\item Stress management
+\item Avoidance of risky substances
+\item Social connections
+\end{itemize}
+
+These interventions have shown effectiveness in reducing low-grade chronic inflammation, which underlies many chronic and autoimmune diseases \cite{LM2023}. The connection between lifestyle factors, inflammation, oxidation, and disease is particularly relevant to our project.
+
+Polyphenols in whole food, plant-based dietary patterns act on the vascular endothelium to reduce oxidation of low-density lipoprotein (LDL) and inflammation, which is directly linked to cardiovascular disease prevention \cite{IBLM2023}.
+
+Lifestyle Medicine serves as a facilitator of behavior changes that can alter the pathophysiology of chronic diseases, acting as a first-line treatment for lifestyle-related chronic conditions. As behavior determines health, we need data arguments to persuade patients to improve behavior, and personal data added to evidence should provide a stronger argument.
+
+\subsection{Vital Signs and Pathophysiology}
+
+Vital signs are sensitive and dynamic indicators of health status, often showing early changes in various clinical conditions. This project initially focuses on:
+
+\begin{itemize}
+\item Hypoxia: Definition, measurement (pulse oximetry), and health implications
+\item Heart rate: Variability, relationship with mortality, and predictive value
+\item Relationships between hypoxia, inflammation, and acidemia in the pathophysiology of chronic diseases
+\end{itemize}
+
+Chronic inflammation, particularly low-grade inflammation, often remains silent but can lead to significant tissue damage over time. This project will explore how vital sign monitoring can detect early signs of inflammatory processes before they manifest as clinical diseases.
+
+Oxidative stress and its relationship with the initiation and promotion phases of carcinogenesis also merit investigation, as similar mechanisms may be at play in other chronic diseases.
+
+\section{Methodology} \label{sec:methodology}
+
+The development of the project will follow these main steps:
+
+\begin{enumerate}
+\item Systematic literature review on:
+   \begin{itemize}
+   \item Sensor technologies and data collection
+   \item Learning Health Systems
+   \item Relationship between vital signs and chronic diseases
+   \item Health interoperability
+   \item Lifestyle Medicine and early-stage inflammatory processes
+   \end{itemize}
+\item Development of a Personal Health Record (PHR) based on openEHR
+\item Implementation of APIs for data collection from smartphones and smartwatches
+\item Development of algorithms for data analysis and knowledge generation
+\item Creation of interfaces for data visualization and feedback for patients and doctors
+\item Evaluation of the system in terms of usability, acceptance, and clinical impact
+\end{enumerate}
+
+We will begin by collecting vital signs from patients who agree to make data from their smartwatches or smartphones available (SpO2, heart rate, temperature, sleep, exercise, food, stress, noise, weather, geolocation, ECG). We intend to collect data in real-time and also collect data already stored in devices, such as environmental data, food, sleep, and exercise logs.
+
+We will then build a Personal Health Record (PHR) for each patient to aggregate, summarize, and analyze the collected data. We will also try to correlate the data with the patient's medical history and ask the patient to answer a few questions about their lifestyle to try to find any relationship between the collected data, the patient's lifestyle, and the available medical history.
+
+Another output of our project is to make it easy to export the collected data to other systems, such as the patient's Electronic Health Record (EHR) or a research database, to make it available, for example, at a medical appointment, even primary or emergency care. This will be in a summary format, similar to a discharge summary, available as a shareable PDF, but also in electronic format, like XML or JSON.
+
+\section{Expected Contributions} \label{sec:contributions}
+
+This project aims to contribute to the advancement of knowledge in several areas:
+
+\begin{itemize}
+\item Development of a framework for implementing Learning Health Systems based on patient data
+\item Methodologies for transforming vital sign data into actionable knowledge
+\item Insights into the relationship between early changes in vital signs and chronic diseases
+\item Advances in the interoperability of health data between personal devices and clinical systems
+\item Empowerment of patients through access to and understanding of their own health data
+\end{itemize}
+
+A unique aspect of this project is its focus on shifting the decision-making paradigm in healthcare. Our goal is to position patients as the main decision-makers rather than "co-pilots," with medical doctors stepping back to become coaches. This represents a fundamental shift in healthcare power dynamics, supported by the democratization of health data and knowledge.
+
+The creation of management dashboards will serve multiple stakeholders:
+\begin{itemize}
+\item One for the patient, providing personalized health insights
+\item One for the attending physician, supporting clinical decision-making
+\item One for the physician managing a group of patients (public health or insurance portfolio), enabling population health management
+\end{itemize}
+
+\section{Dissertation Structure} \label{sec:struct}
+
+In addition to the introduction, this dissertation contains x more chapters.
+Chapter~\ref{chap:sota} describes the state of the art and presents related work.
+Chapter~\ref{chap:chap3} presents the methods and materials used in developing the framework.
+Chapter~\ref{chap:chap4} describes the results obtained and their analysis.
+Chapter~\ref{chap:concl} presents the conclusions, limitations, and future work.
