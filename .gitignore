@@ -12,4 +12,6 @@ imagens/
 *.log
 *.tmp
 .DS_Store
-**/.DS_Store
+**/.DS_Storedirectory_tree*
+old/
+directory_tree*

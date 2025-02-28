@@ -1,8 +1,8 @@
 %% UP THESIS STYLE for LaTeX2e
 
 %% Add the necessary BibTeX command
-\bibliographystyle{plainat-pt}
-\bibliography{references} % Replace "references" with the actual name of your BibTeX file
+%% \bibliographystyle{plainat-pt}
+%% \bibliography{references} % Replace "references" with the actual name of your BibTeX file
 
 %% how to use upteses for MIMED dissertations
 %%
@@ -25,7 +25,7 @@
 %%%%%%% English version 
 
 %% MIMED options
-\usepackage[mimed]{styles/upteses}                   % work version
+\usepackage[mimed]{upteses}                   % work version
 %\usepackage[mimed,juri]{styles/upteses}             % juri verrion
 %\usepackage[mimed,final]{styles/upteses}            % final version
 
@@ -84,7 +84,7 @@
 
 %%----------------------------------------
 %% TIP: if you want to define more macros, use an external file to keep them
-\include{mymacros}
+\input{mymacros}
 
 
 %%----------------------------------------
@@ -101,7 +101,7 @@
 \author{Ricardo Lourenço dos Santos}
 
 %% Uncomment next line for date of submission
-\pdisdate{February 28, 2025}
+%% \pdisdate{February 28, 2025}
 \thesisdate{February 28, 2025}
 
 %%Uncomment next line for copyright text if used
@@ -172,6 +172,7 @@
 %% bibliography is in ``myrefs.bib''
 %%\include{references}
 \bibliography{references}
+\bibliographystyle{bibstyles/plain-pt}
 \PrintBib{references}
 
 %% Index
