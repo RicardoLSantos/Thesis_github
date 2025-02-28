@@ -68,6 +68,18 @@ Learning Health Systems (LHS) represent a paradigm where data generated during c
 
 The purpose of our project is to build a framework and a proof of concept and all the necessary documentation for the development of a Learning Health System based on vital signs and the quality perceived by users in healthcare. We believe that observational scientific evidence (a well-structured and relevant research question is better than many double-blind, randomized studies based on biased or not based on real-world data research questions).
 
+As described by Foley and Vale \cite{foley2023framework}, the development and evaluation framework of LHS signifies a shift towards health systems that learn from every patient interaction, featuring learning communities, data conversion into knowledge, and the application of this knowledge to practice, all supported by dedicated platforms. This model is designed for scalability, adaptability, and is responsive to community feedback and practical insights.
+
+The architecture of LHS integrates improvement cycles focused on specific health issues, governance for consistency, and a socio-technical infrastructure that underpins these improvement efforts \cite{friedman2024socio}. This infrastructure encompasses digital technologies and involves human roles, policies, and processes. It provides shared services supporting various functions such as developing learning communities, performance analytics, data governance, knowledge integration, and performance enhancements.
+
+\subsection{Patient-Generated Health Data Integration}
+
+Patient-Generated Health Data (PGHD) from wearable devices and mobile applications offers unprecedented opportunities to improve healthcare quality, particularly in lifestyle medicine interventions \cite{santos2023improving}. While theoretical frameworks provide valuable guidance for developing LHS that incorporate PGHD, there is a critical need for practical implementations that demonstrate the feasibility and value of such approaches \cite{santos2024improving}.
+
+The growing availability of PGHD offers unprecedented opportunities, but its integration into clinical systems faces significant interoperability challenges due to format diversity and lack of standardization \cite{santos2024healthcare}. A key strategy to enrich the LHS involves leveraging vital signs and data from wearable technologies to boost patient engagement, support self-management, and tailor evidence-based healthcare to individual needs.
+
+The healthcare sector aims to incorporate PGHD to improve treatment customization, prevention, and patient-doctor interactions beyond traditional appointments, with challenges like standardizing data collection and managing the vast amount of information. Addressing these challenges will fully leverage PGHD's potential \cite{vaidyam2022enabling}.
+
 \subsection{Health Data Interoperability}
 
 Semantic interoperability in health is fundamental to allow data to flow between different systems and be correctly interpreted. Standards such as openEHR and HL7 FHIR are essential for this project:
@@ -85,6 +97,30 @@ Semantic interoperability in health is fundamental to allow data to flow between
 
 As pointed out by Tomaz Gornik \cite{Gornik2021}: ``IT systems in use today were built for institutions, not patients...'' This project seeks to reverse this paradigm, putting patients at the center of data flow and decision making.
 
+Our approach emphasizes health data interoperability, utilizing HL7 FHIR for data exchange, openEHR for storing data linked to ontologies and terminologies independent of software and maintaining data semantics \cite{frade2021openehr}. Additionally, OHDSI contributes to observational health evidence, providing tools for uniform data representation, the ETL process, and open-source analytics, which are instrumental in deriving evidence-based insights from patient data.
+
+Implementing a low-code Electronic Health Record (EHR) system within the openEHR framework is feasible, even with a shortage of open-source tools for front-end development, such as form generation \cite{frade2021openehr}. OpenEHR adheres to many GDPR mandates concerning data integrity, confidentiality, and access, thereby supporting data protection by design \cite{sousa2018openehr}.
+
+OpenEHR is crucial in modeling healthcare processes and decision-making. Its Task Planning and Decision Language specifications enhance workflow and clinical decision-making. The Guideline Definition Language (GDL) and its advanced version, GDL2, have improved the support for clinical guidelines, enhancing clinical decision-making \cite{silva2024openehr}. The Decision Language (DL) specification further refines guideline management, allowing for structured clinical rules and guidelines through Decision Logic Modules (DLM) \cite{beale2021decision}.
+
+HL7 FHIR and openEHR serve as complementary standards in healthcare IT. Initiatives like Evidence-Based Medicine on FHIR (EBM-on-FHIR) and Clinical Practice Guidelines on FHIR (CPG-on-FHIR) utilize FHIR to digitally represent clinical guideline recommendations, processing data from evidence generation to formulation \cite{lichtner2023representation}.
+
+\subsection{Co-Produced Personal Health Records}
+
+The co-produced Personal Health Record (coPHR) concept represents a collaborative approach to health data management, emphasizing shared responsibility between patients and healthcare providers \cite{apperta2018blueprint}. Unlike traditional patient portals or personal health records, a coPHR provides patients with control over their health data while facilitating safe and secure data sharing with healthcare providers.
+
+CoPHR offers a collaborative approach to health data science, stressing shared responsibility between patients and healthcare providers, empowering patients by allowing them to control and contribute their data from various sources like wearables and apps. This model seeks to boost patient engagement through more active involvement in health management, develop comprehensive health profiles through integrated data, and enhance communication and collaboration via shared health record access \cite{apperta2018blueprint}.
+
+Recognizing challenges like data privacy, security, standardization, and the need for infrastructure, openEHR provides support through standardization and infrastructure. The coPHR model addresses the limitations of traditional health records by promoting interoperability and preventing data silos with an open platform for seamless integration of applications and data sources. It utilizes an openEHR-based standard data structure and a user-friendly API to support application development, ensuring legal validity, data provenance, and detailed audit trails within a governance framework protecting all stakeholders.
+
+\subsection{Advanced Analytics and Large Language Models}
+
+Local Large Language Models (LLM) can effectively combine various data types (PGHD, EBM, CPG), developing models that integrate external health data and evidence to generate timely, personalized evidence. This setup helps patients manage their decisions with health professionals as guides rather than primary decision-makers \cite{miao2024chain}.
+
+Using chain-of-thought prompting in LLMs and developing machine learning-enabled clinical information systems (ML-CISs) utilizing FHIR standards marks major progress in healthcare technology. Chain-of-thought prompting makes AI processes clearer and more aligned with human reasoning, improving diagnostics, treatment planning, and outcomes through a structured, ethical approach \cite{balch2023machine}.
+
+This approach allows for sophisticated natural language processing and data analytics while keeping sensitive health data within the patient's control, addressing important privacy concerns associated with cloud-based processing of health information. The system incorporates validation mechanisms to assess data quality and reliability, ensuring that clinical decisions are based on trustworthy information.
+
 \subsection{Lifestyle Medicine}
 
 Lifestyle Medicine emerges as a specialty focused on the prevention and treatment of chronic diseases through lifestyle modifications. Its six pillars include:
@@ -100,9 +136,21 @@ Lifestyle Medicine emerges as a specialty focused on the prevention and treatmen
 
 These interventions have shown effectiveness in reducing low-grade chronic inflammation, which underlies many chronic and autoimmune diseases \cite{LM2023}. The connection between lifestyle factors, inflammation, oxidation, and disease is particularly relevant to our project.
 
+The six pillars of Lifestyle Medicine serve to transform how patients perceive their daily decisions and their impact on health over the medium to long term \cite{clayton2023foundations}. This transformation is potent when combined with PGHD in a CoPHR, providing specific, tailored evidence about the importance of health and lifestyle decisions.
+
 Polyphenols in whole food, plant-based dietary patterns act on the vascular endothelium to reduce oxidation of low-density lipoprotein (LDL) and inflammation, which is directly linked to cardiovascular disease prevention \cite{IBLM2023}.
 
 Lifestyle Medicine serves as a facilitator of behavior changes that can alter the pathophysiology of chronic diseases, acting as a first-line treatment for lifestyle-related chronic conditions. As behavior determines health, we need data arguments to persuade patients to improve behavior, and personal data added to evidence should provide a stronger argument.
+
+\subsection{Evidence Synthesis and Decision Support}
+
+The practice of evidence-based medicine requires the integration of clinical expertise, patient values, and the best available research evidence. In lifestyle medicine, where interventions focus on modifiable behaviors such as nutrition, physical activity, and stress management, maintaining current knowledge of the evidence base presents significant challenges \cite{clayton2023foundations}.
+
+Living Systematic Reviews represent an evolution of traditional systematic reviews, featuring continual updating as new evidence emerges \cite{elliott2014living}. This approach is particularly valuable in fields with rapidly evolving evidence bases, such as lifestyle medicine. By maintaining an up-to-date synthesis of research findings, LSRs provide clinicians with access to current evidence, reducing the common lag between research publication and clinical implementation \cite{elliott2017living}.
+
+Bayesian statistical methods offer a natural framework for managing uncertainty in clinical evidence \cite{spiegelhalter2004bayesian}. Unlike traditional frequentist approaches, Bayesian methods explicitly incorporate prior knowledge and update beliefs as new evidence emerges. This aligns conceptually with clinical reasoning, where clinicians integrate their prior knowledge with new information about individual patients.
+
+For modeling disease progression and the impact of interventions over time, Markov models offer a powerful approach \cite{sonnenberg1993markov}. These models represent health states and transitions between them, allowing for the simulation of disease trajectories under different intervention scenarios.
 
 \subsection{Vital Signs and Pathophysiology}
 
@@ -113,6 +161,10 @@ Vital signs are sensitive and dynamic indicators of health status, often showing
 \item Heart rate: Variability, relationship with mortality, and predictive value
 \item Relationships between hypoxia, inflammation, and acidemia in the pathophysiology of chronic diseases
 \end{itemize}
+
+The cellular mechanisms of oxygen sensing, recognized by the 2019 Nobel Prize in Physiology or Medicine, illustrate the fundamental importance of physiological monitoring in health management \cite{nobel2019physiology}. The Hypoxia-Inducible Factor (HIF) pathway demonstrates how cellular responses to oxygen levels influence metabolism and disease development \cite{bosco2020mitochondrial}.
+
+In the context of understanding mitochondrial metabolic dysfunction, as highlighted by the Mitochondrial Metabolic Theory (MMT), we can further elucidate the underlying pathologies of chronic diseases like cancer \cite{bosco2020mitochondrial}. MMT posits that most cancerous changes are due to oxidative stress and mitochondrial dysfunction rather than direct genetic mutations, suggesting that mitochondrial health is critical in preventing and managing chronic diseases effectively.
 
 Chronic inflammation, particularly low-grade inflammation, often remains silent but can lead to significant tissue damage over time. This project will explore how vital sign monitoring can detect early signs of inflammatory processes before they manifest as clinical diseases.
 
@@ -138,11 +190,50 @@ The development of the project will follow these main steps:
 \item Evaluation of the system in terms of usability, acceptance, and clinical impact
 \end{enumerate}
 
+Our implementation addresses several key technical challenges in PGHD integration:
+
+\begin{enumerate}
+    \item Data collection from diverse sources, including wearable devices (smartwatches, fitness trackers) and smartphones
+    \item Data standardization and mapping to established clinical terminology systems
+    \item Extraction, transformation, and loading (ETL) processes for heterogeneous health data
+    \item Local processing of health data using Large Language Models (LLMs) to preserve privacy
+    \item User interface design that supports both patient self-management and clinical decision-making
+    \item Security and privacy protection in accordance with regulatory requirements
+\end{enumerate}
+
+The system architecture incorporates a modular design that separates data storage from application functionality, allowing for flexibility and extensibility. The core data repository is based on openEHR archetypes and templates, providing a standardized clinical information model. HL7 FHIR is used for external interfaces, enabling integration with a wide range of health information systems and consumer devices.
+
+The proof of concept implementation focuses initially on key vital signs including heart rate, oxygen saturation, physical activity, and sleep patterns. These parameters were selected based on their significance in lifestyle medicine interventions and the availability of consumer devices capable of measuring them with reasonable accuracy.
+
 We will begin by collecting vital signs from patients who agree to make data from their smartwatches or smartphones available (SpO2, heart rate, temperature, sleep, exercise, food, stress, noise, weather, geolocation, ECG). We intend to collect data in real-time and also collect data already stored in devices, such as environmental data, food, sleep, and exercise logs.
 
 We will then build a Personal Health Record (PHR) for each patient to aggregate, summarize, and analyze the collected data. We will also try to correlate the data with the patient's medical history and ask the patient to answer a few questions about their lifestyle to try to find any relationship between the collected data, the patient's lifestyle, and the available medical history.
 
 Another output of our project is to make it easy to export the collected data to other systems, such as the patient's Electronic Health Record (EHR) or a research database, to make it available, for example, at a medical appointment, even primary or emergency care. This will be in a summary format, similar to a discharge summary, available as a shareable PDF, but also in electronic format, like XML or JSON.
+
+Our methodological framework for evidence synthesis and decision support includes:
+
+\begin{itemize}
+\item Living Systematic Review approach for continuous evidence updates
+\item Bayesian statistical methods for managing clinical uncertainty
+\item Markov models for disease progression and intervention simulation
+\item Implementation using openEHR Decision Language and Decision Logic Modules
+\item Integration with HL7 FHIR CDS Hooks for decision support mechanisms
+\end{itemize}
+
+\section{Project Scope and Limitations} \label{sec:scope}
+
+It is important to acknowledge that this project is extensive and highly detailed, encompassing multiple phases and components that are unlikely to be fully completed within the timeframe of the doctoral program. The project has been structured into three main phases:
+
+\begin{enumerate}
+\item Development of the theoretical framework for a Learning Health System integrating PGHD
+\item Implementation of a proof of concept coPHR system with vital signs monitoring
+\item Development of advanced decision support mechanisms using living systematic reviews and Bayesian approaches
+\end{enumerate}
+
+While we aim to make significant progress in all three areas during the doctoral program, the complete implementation and evaluation of all components may extend beyond the program's duration. This dissertation will focus primarily on establishing the foundational framework, developing a functional proof of concept, and outlining the methodology for advanced decision support, with the understanding that full implementation and scaling would be part of ongoing research beyond the current program.
+
+These limitations do not detract from the value of the work but rather acknowledge the realistic scope of what can be accomplished within the doctoral timeline while setting the stage for continued research and development in this important area.
 
 \section{Expected Contributions} \label{sec:contributions}
 
@@ -165,10 +256,18 @@ The creation of management dashboards will serve multiple stakeholders:
 \item One for the physician managing a group of patients (public health or insurance portfolio), enabling population health management
 \end{itemize}
 
+Our contributions to the three main aspects of this project include:
+
+\begin{enumerate}
+\item \textbf{Theoretical Framework}: A comprehensive approach to PGHD integration in an LHS, addressing socio-technical, interoperability, and clinical implementation challenges.
+\item \textbf{Practical Implementation}: A proof of concept coPHR system demonstrating the feasibility of integrating data from wearable devices and smartphones into clinical practice, with a focus on vital signs monitoring.
+\item \textbf{Methodological Advances}: An integrated approach to evidence synthesis and decision support, combining living systematic reviews, Bayesian methods, and standardized clinical decision support implementations.
+\end{enumerate}
+
 \section{Dissertation Structure} \label{sec:struct}
 
 In addition to the introduction, this dissertation contains x more chapters.
-Chapter~\ref{chap:sota} describes the state of the art and presents related work.
-Chapter~\ref{chap:chap3} presents the methods and materials used in developing the framework.
-Chapter~\ref{chap:chap4} describes the results obtained and their analysis.
-Chapter~\ref{chap:concl} presents the conclusions, limitations, and future work.
+Chapter~\ref{chap:sota} describes the state of the art and presents related work in Learning Health Systems, PGHD integration, health data interoperability, and lifestyle medicine.
+Chapter~\ref{chap:chap3} presents the methods and materials used in developing the framework, including the architecture of the coPHR system, data collection mechanisms, and analytical approaches.
+Chapter~\ref{chap:chap4} describes the results obtained and their analysis, including the proof of concept implementation, preliminary findings from the system, and the methodological framework for evidence synthesis.
+Chapter~\ref{chap:concl} presents the conclusions, limitations, and future work, including suggestions for further development and scaling of the system beyond the doctoral program.
